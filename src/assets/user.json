@@ -1,0 +1,62 @@
+[  
+  {  
+    "id": 1,  
+    "name": "admin",  
+    "groups": "IT"
+    
+  },  
+  {  
+    "id": 2,  
+    "name": "salaboy",  
+    "groups": "IT"
+    
+  },  
+  {  
+    "id": 3,  
+    "name": "maciej",  
+    "groups": "HR"
+    
+  },  
+  {  
+    "id": 4,  
+    "name": "kris",  
+    "groups": "HR"
+    
+  },  
+  {  
+    "id": 5,  
+    "name": "John",  
+    "groups": "Sales"
+    
+  },
+  {  
+    "id": 6,  
+    "name": "jack",  
+    "groups": "Sales" 
+    
+  }, 
+  {  
+    "id": 7,  
+    "name": "director",  
+    "groups": "Accounting"
+    
+  },
+  {  
+    "id": 8,  
+    "name": "John",  
+    "groups": "Accounting"
+    
+  },
+  {  
+    "id": 9,  
+    "name": "katy",  
+    "groups": "PM"
+    
+  },
+  {  
+    "id": 10,  
+    "name": "user",  
+    "groups": "PM"
+    
+  }
+]  

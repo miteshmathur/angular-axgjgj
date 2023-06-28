@@ -1,0 +1,33 @@
+<div class="container">
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">User Id</th>
+      <th scope="col">Leave Type</th>
+      <th scope="col">Leave Days</th>
+      <th scope="col">Reason</th>
+      <th scope="col">Approved</th>
+      <th scope="col">Approver Comment</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let detail of requestDetail">
+      <th scope="row">{{ detail.id }}</th>
+      <td>{{ detail.userId }}</td>
+      <td>{{ detail.name }}</td>
+      <td>{{ detail.leaveType }}</td>
+      <td>{{ detail.leaveDays }}</td>
+      <td>{{ detail.reason }}</td>
+      <td>{{ detail.approved }}</td>
+      <td>{{ detail.approverComment }}</td>
+      <td>
+        <button type="button" class="btn btn-success">Edit</button
+        ><button type="button" class="btn btn-danger ml-1">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

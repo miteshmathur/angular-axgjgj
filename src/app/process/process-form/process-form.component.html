@@ -1,0 +1,13 @@
+<div class="bg-dark">
+    <div class="container py-5">
+      <div class="card">
+        <article class="card-body">
+          <h4 class="card-title mb-4 mt-1 text-center">
+            Form
+          </h4>
+          <app-process-dynamic-form  [formData]="formDetail" (formSubmitEvent)="submitForm($event)"></app-process-dynamic-form>
+        </article>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,49 @@
+<div class="container">
+<select class="custom-select my-4 custom-select" (change)="loadTask($event)">
+  <option>Reserved</option>
+  <option>Completed</option>
+  <option>Created</option>
+  <option>Error</option>
+  <option>Exited</option>
+  <option>Failed</option>
+  <option>InProgress</option>
+  <option>Ready</option>
+  <option>Suspended</option>
+</select>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Task Id</th>
+      <th scope="col">Task</th>
+      <th scope="col">Process Definition Id</th>
+      <th scope="col">Container Id</th>
+      <th scope="col">Status</th>
+      <th scope="col">Created On</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let task of tasksList">
+      <th scope="row">{{ task["task-id"] }}</th>
+      <td>{{ task["task-name"] }}</td>
+      <td>{{ task["task-proc-def-id"] }}</td>
+      <td>{{ task["task-container-id"] }}</td>
+      <td>{{ task["task-status"] }}</td>
+      <td>
+        {{ task["task-created-on"]["java.util.Date"] | date : "dd/MM/yyyy" }}
+      </td>
+      <td>
+        <button
+          type="button"
+          class="btn btn-info"
+          [disabled]="validateButtonFlag"
+          (click)="navigateToValidatePage(task)"
+        >
+          Validate
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>

@@ -1,0 +1,45 @@
+<span *ngIf="dynamicFormGroup">
+  <form [formGroup]="dynamicFormGroup" (ngSubmit)="onSubmit()">
+    <ng-container *ngFor="let field of fields">
+      <div class="form-group" *ngIf="field.type === 'textbox'">
+        <label>{{ field.label }}</label>
+        <input
+          class="form-control"
+          [formControlName]="field.name"
+          [type]="field.type"
+        />
+      </div>
+      <div class="form-group" *ngIf="field.type === 'textarea'">
+        <label>{{ field.label }}</label>
+        <input
+          class="form-control"
+          [formControlName]="field.name"
+          [type]="field.type"
+        />
+      </div>
+      <div class="form-group" *ngIf="field.type === 'integerbox'">
+        <label>{{ field.label }}</label>
+        <input
+          class="form-control"
+          [formControlName]="field.name"
+          type="number"
+        />
+      </div>
+      <div class="form-group form-check" *ngIf="field.type === 'checkbox'">
+        <input
+          type="checkbox"
+          [formControlName]="field.name"
+          class="form-check-input"
+          id="exampleCheck1"
+        />
+        <label class="form-check-label" for="exampleCheck1">{{
+          field.name
+        }}</label>
+      </div>
+    </ng-container>
+
+    <button type="submit" class="btn btn-primary btn-block">
+      {{ buttonState }}
+    </button>
+  </form>
+</span>

@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>Please Select A Process:-</h2>
+<mat-dialog-content>
+  <select class="custom-select my-4" #selectedProcessId style="width: 31rem">
+    <option *ngFor="let data of processIds">{{ data["process-id"] }}</option>
+  </select>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button class="btn btn-danger" mat-dialog-close>Cancel</button>
+  <button
+    class="btn btn-success ml-2"
+    mat-dialog-close
+    (click)="createProcess(selectedProcessId.value)"
+  >
+    Submit
+  </button>
+</mat-dialog-actions>
